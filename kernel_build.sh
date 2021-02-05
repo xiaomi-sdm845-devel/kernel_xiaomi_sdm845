@@ -8,9 +8,11 @@
 DEVICE="beryllium"
 DEVICE2="polaris"
 DEVICE3="dipper"
+DEVICE4="perseus"
 DEFCONFIG="${DEVICE}_defconfig"
 DEFCONFIG2="${DEVICE2}_defconfig"
 DEFCONFIG3="${DEVICE3}_defconfig"
+DEFCONFIG4="${DEVICE4}_defconfig"
 LOG="$HOME/log.txt"
 
 # Export arch and subarch
@@ -132,3 +134,9 @@ build_setup
 build_config $DEFCONFIG3
 build_kernel
 build_end $DEVICE3
+
+# Build device 4
+build_setup
+build_config $DEFCONFIG4
+build_kernel
+build_end $DEVICE4
